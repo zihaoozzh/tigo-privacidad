@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · Tigo</title>
+<meta name="description" content="Política de privacidad de la aplicación de fidelización de Tigo, un poco de todo (Pollença, Mallorca).">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1F5FA8; --blue-dark:#17497F; --green:#4C9644;
+    --ink:#22272E; --body:#454C56; --muted:#7A828C;
+    --line:#E4E9F0; --sand:#F4F7FB; --white:#fff;
+    --radius:14px; --maxw:820px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:76px;}
+  body{
+    margin:0; background:var(--white); color:var(--body);
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    font-size:16.5px; line-height:1.72; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+
+  /* Cabecera */
+  header{
+    background:linear-gradient(160deg,var(--blue) 0%,var(--blue-dark) 100%);
+    color:#fff; padding:46px 0 40px;
+  }
+  header img{height:56px; display:block; margin-bottom:22px;}
+  header h1{margin:0 0 6px; font-size:32px; font-weight:700; letter-spacing:-.6px; line-height:1.2;}
+  header .sub{margin:0; font-size:16.5px; opacity:.88; font-weight:400; max-width:620px;}
+  header .date{margin:20px 0 0; font-size:14px; opacity:.78; font-weight:400;}
+
+  /* Selector de idioma */
+  nav{
+    position:sticky; top:0; z-index:10;
+    background:rgba(255,255,255,.92); backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex; gap:6px; overflow-x:auto; padding-top:10px; padding-bottom:10px;}
+  nav a{
+    flex:0 0 auto; padding:7px 16px; border-radius:999px; border:0;
+    color:var(--muted); text-decoration:none; font-size:14.5px; font-weight:500;
+    transition:background .15s,color .15s;
+  }
+  nav a:hover{background:var(--sand); color:var(--blue); border:0;}
+
+  /* Contenido */
+  main{padding:44px 0 0;}
+  section{display:none; animation:fade .25s ease; scroll-margin-top:24px; padding-top:8px;}
+  section:target{display:block;}
+  section#es{display:block;}
+  body:has(section:target) section#es:not(:target){display:none;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+
+  .date{color:var(--muted); font-size:14px;}
+  section > .date:first-child{display:none;}
+
+  h2{
+    font-size:20.5px; font-weight:600; color:var(--ink);
+    margin:42px 0 12px; letter-spacing:-.25px; scroll-margin-top:80px;
+    padding-top:2px;
+  }
+  section > h2:first-of-type{margin-top:0;}
+  p{margin:0 0 14px;}
+  ul{padding-left:22px; margin:0 0 14px;}
+  li{margin-bottom:7px;}
+  strong{color:var(--ink); font-weight:600;}
+  a{color:var(--blue); text-decoration:none; border-bottom:1px solid rgba(31,95,168,.28);}
+  a:hover{border-bottom-color:var(--blue);}
+
+  /* Tabla */
+  .table-wrap{overflow-x:auto; margin:16px 0 20px; border:1px solid var(--line); border-radius:var(--radius);}
+  table{width:100%; border-collapse:collapse; font-size:15.5px;}
+  th,td{text-align:left; padding:13px 16px; vertical-align:top;}
+  th{background:var(--sand); font-weight:600; color:var(--ink); font-size:14px; letter-spacing:.2px;}
+  tr + tr td{border-top:1px solid var(--line);}
+  td:first-child{font-weight:500; color:var(--ink); white-space:nowrap;}
+  @media(max-width:560px){td:first-child{white-space:normal;}}
+
+  /* Caja resumen */
+  .box{
+    background:var(--sand); border:1px solid var(--line); border-left:4px solid var(--green);
+    border-radius:var(--radius); padding:18px 20px; margin:34px 0 8px; font-size:16px;
+  }
+
+  /* Pie */
+  footer{
+    margin-top:56px; border-top:1px solid var(--line); background:var(--sand);
+    padding:30px 0 40px; color:var(--muted); font-size:14.5px;
+  }
+  footer .name{color:var(--ink); font-weight:600; display:block; margin-bottom:4px;}
+  footer a{color:var(--blue);}
+
+  @media(max-width:600px){
+    body{font-size:15.5px; line-height:1.68;}
+    .wrap{padding:0 18px;}
+    header{padding:30px 0 26px;}
+    header h1{font-size:25px;}
+    header img{height:40px; margin-bottom:16px;}
+    header .sub{font-size:14.5px;}
+    header .date{font-size:13px; margin-top:14px;}
+    nav .wrap{gap:2px;}
+    nav a{padding:6px 12px; font-size:14px;}
+    main{padding:32px 0 0;}
+    h2{font-size:17.5px; margin:32px 0 10px;}
+    th,td{padding:11px 13px; font-size:14.5px;}
+    .box{padding:16px 18px; font-size:15px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="logo.png" alt="Tigo — un poco de todo">
+    <h1>Política de privacidad</h1>
+    <p class="sub">Aplicación de fidelización de Tigo — un poco de todo · Pollença, Mallorca</p>
+    <p class="date">Última actualización: 5 de septiembre de 2026</p>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#es">Español</a>
+    <a href="#ca">Català</a>
+    <a href="#en">English</a>
+    <a href="#zh">中文</a>
+    <a href="#de">Deutsch</a>
+  </div>
+</nav>
+
+<main class="wrap">
+<section id="es">
+<p class="date">Última actualización: 5 de septiembre de 2026</p>
+
+  <h2>1. Quién es responsable de tus datos</h2>
+  <p>Yanling Zhou, con NIE X2762129J, titular del comercio <strong>Tigo — un poco de todo</strong>, con domicilio en Carrer de Cecili Metel 6, 07460 Pollença (Illes Balears, España).</p>
+  <p>Correo de contacto para cualquier cuestión relacionada con tus datos: <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>.</p>
+
+  <h2>2. Qué datos recogemos</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Dato</th><th>Para qué</th></tr>
+    <tr><td>Nombre</td><td>Identificarte en caja al sumar o entregar puntos</td></tr>
+    <tr><td>Correo electrónico</td><td>Acceder a tu cuenta y recuperar la contraseña</td></tr>
+    <tr><td>Importe de tus compras en la tienda</td><td>Calcular los puntos que te corresponden</td></tr>
+    <tr><td>Saldo e historial de puntos y regalos</td><td>Gestionar el programa de fidelización</td></tr>
+    <tr><td>Identificador de notificaciones de tu móvil</td><td>Enviarte avisos de novedades y de tus puntos</td></tr>
+    <tr><td>Idioma elegido y preferencias de avisos</td><td>Mostrarte la aplicación en tu idioma</td></tr>
+  </table></div>
+  <p>No recogemos tu ubicación, tu agenda de contactos, tus fotos ni ningún dato de pago. La aplicación no realiza cobros: todas las compras se pagan en la tienda física.</p>
+
+  <h2>3. Por qué podemos tratarlos</h2>
+  <ul>
+    <li><strong>Para cumplir con lo que te ofrecemos</strong> (artículo 6.1.b del RGPD): sin tus datos no podríamos llevar la cuenta de tus puntos ni entregarte los regalos.</li>
+    <li><strong>Con tu consentimiento</strong> (artículo 6.1.a): las notificaciones. Puedes retirarlo cuando quieras desde los ajustes de tu móvil, y los recordatorios también desde tu perfil en la aplicación.</li>
+  </ul>
+
+  <h2>4. Quién más los ve</h2>
+  <p>No vendemos ni cedemos tus datos a nadie. Solo los tratan, por cuenta nuestra, los proveedores técnicos que hacen funcionar la aplicación:</p>
+  <ul>
+    <li><strong>Supabase</strong> — base de datos y cuentas. Servidores en París (Unión Europea).</li>
+    <li><strong>Expo</strong> — envío de las notificaciones. Recibe únicamente el identificador de tu móvil y el texto del aviso.</li>
+    <li><strong>Google Firebase</strong> — entrega de notificaciones en dispositivos Android.</li>
+    <li><strong>Google Gemini</strong> — se usa únicamente para generar descripciones de los productos de la tienda a partir de sus fotos. No se le envía ningún dato tuyo.</li>
+  </ul>
+  <p>Estos proveedores pueden implicar transferencias fuera del Espacio Económico Europeo, amparadas en las cláusulas contractuales tipo aprobadas por la Comisión Europea.</p>
+
+  <h2>5. Cuánto tiempo los guardamos</h2>
+  <p>Mientras tengas la cuenta abierta. Si eliminas tu cuenta desde la aplicación, se borran tus datos personales y tu saldo de puntos de forma inmediata e irreversible. Los registros contables anónimos de la tienda pueden conservarse por obligación legal.</p>
+  <p>Ten en cuenta que tus puntos caducan si no realizas ninguna compra durante seis meses; te avisamos antes de que ocurra.</p>
+
+  <h2>6. Tus derechos</h2>
+  <p>Puedes acceder a tus datos, corregirlos, borrarlos, limitar u oponerte a su tratamiento, y pedir que te los entreguemos en un formato portable. Para ejercerlos, escribe a <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>; te responderemos en el plazo de un mes.</p>
+  <p>Puedes eliminar tu cuenta tú mismo, en cualquier momento, desde <em>Perfil → Eliminar mi cuenta</em> dentro de la aplicación.</p>
+  <p>Si consideras que no hemos atendido bien tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">www.aepd.es</a>).</p>
+
+  <h2>7. Menores</h2>
+  <p>La aplicación no está dirigida a menores de 14 años. Si detectamos una cuenta de un menor de esa edad sin autorización de sus padres o tutores, la eliminaremos.</p>
+
+  <h2>8. Seguridad</h2>
+  <p>Las comunicaciones viajan cifradas y el acceso a los datos está restringido por reglas que impiden que un cliente vea la información de otro. Solo el personal de la tienda puede consultar el saldo de un cliente, y únicamente al atenderle en caja.</p>
+
+  <h2>9. Cambios en esta política</h2>
+  <p>Si modificamos esta política, actualizaremos la fecha del encabezado y, si el cambio es relevante, te avisaremos dentro de la aplicación.</p>
+
+  <div class="box">
+    <strong>En resumen:</strong> guardamos lo mínimo para llevar la cuenta de tus puntos, no lo vendemos a nadie, y puedes borrarlo todo tú mismo desde la aplicación cuando quieras.
+  </div>
+</section>
+
+<section id="ca">
+<p class="date">Darrera actualització: 5 de setembre de 2026</p>
+
+  <h2>1. Qui és responsable de les teves dades</h2>
+  <p>Yanling Zhou, amb NIE X2762129J, titular del comerç <strong>Tigo — un poco de todo</strong>, amb domicili al Carrer de Cecili Metel 6, 07460 Pollença (Illes Balears, Espanya).</p>
+  <p>Correu de contacte per a qualsevol qüestió relacionada amb les teves dades: <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>.</p>
+
+  <h2>2. Quines dades recollim</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Dada</th><th>Per a què</th></tr>
+    <tr><td>Nom</td><td>Identificar-te a caixa en sumar o lliurar punts</td></tr>
+    <tr><td>Correu electrònic</td><td>Accedir al teu compte i recuperar la contrasenya</td></tr>
+    <tr><td>Import de les teves compres a la botiga</td><td>Calcular els punts que et corresponen</td></tr>
+    <tr><td>Saldo i historial de punts i regals</td><td>Gestionar el programa de fidelització</td></tr>
+    <tr><td>Identificador de notificacions del teu mòbil</td><td>Enviar-te avisos de novetats i dels teus punts</td></tr>
+    <tr><td>Idioma triat i preferències d'avisos</td><td>Mostrar-te l'aplicació en el teu idioma</td></tr>
+  </table></div>
+  <p>No recollim la teva ubicació, la teva agenda de contactes, les teves fotos ni cap dada de pagament. L'aplicació no fa cobraments: totes les compres es paguen a la botiga física.</p>
+
+  <h2>3. Per què podem tractar-les</h2>
+  <ul>
+    <li><strong>Per complir amb el que t'oferim</strong> (article 6.1.b del RGPD): sense les teves dades no podríem portar el compte dels teus punts ni lliurar-te els regals.</li>
+    <li><strong>Amb el teu consentiment</strong> (article 6.1.a): les notificacions. Pots retirar-lo quan vulguis des dels ajustos del mòbil, i els recordatoris també des del teu perfil a l'aplicació.</li>
+  </ul>
+
+  <h2>4. Qui més les veu</h2>
+  <p>No venem ni cedim les teves dades a ningú. Només les tracten, per compte nostre, els proveïdors tècnics que fan funcionar l'aplicació:</p>
+  <ul>
+    <li><strong>Supabase</strong> — base de dades i comptes. Servidors a París (Unió Europea).</li>
+    <li><strong>Expo</strong> — enviament de les notificacions. Rep únicament l'identificador del teu mòbil i el text de l'avís.</li>
+    <li><strong>Google Firebase</strong> — lliurament de notificacions en dispositius Android.</li>
+    <li><strong>Google Gemini</strong> — s'utilitza únicament per generar descripcions dels productes de la botiga a partir de les seves fotos. No se li envia cap dada teva.</li>
+  </ul>
+  <p>Aquests proveïdors poden implicar transferències fora de l'Espai Econòmic Europeu, emparades en les clàusules contractuals tipus aprovades per la Comissió Europea.</p>
+
+  <h2>5. Quant temps les guardem</h2>
+  <p>Mentre tinguis el compte obert. Si elimines el teu compte des de l'aplicació, s'esborren les teves dades personals i el teu saldo de punts de manera immediata i irreversible. Els registres comptables anònims de la botiga es poden conservar per obligació legal.</p>
+  <p>Tingues en compte que els teus punts caduquen si no fas cap compra durant sis mesos; t'avisem abans que passi.</p>
+
+  <h2>6. Els teus drets</h2>
+  <p>Pots accedir a les teves dades, corregir-les, esborrar-les, limitar o oposar-te al seu tractament, i demanar que te les lliurem en un format portable. Per exercir-los, escriu a <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>; et respondrem en el termini d'un mes.</p>
+  <p>Pots eliminar el teu compte tu mateix, en qualsevol moment, des de <em>Perfil → Eliminar el meu compte</em> dins de l'aplicació.</p>
+  <p>Si consideres que no hem atès bé la teva sol·licitud, pots reclamar davant l'Agència Espanyola de Protecció de Dades (<a href="https://www.aepd.es">www.aepd.es</a>).</p>
+
+  <h2>7. Menors</h2>
+  <p>L'aplicació no està dirigida a menors de 14 anys. Si detectem un compte d'un menor d'aquesta edat sense autorització dels seus pares o tutors, l'eliminarem.</p>
+
+  <h2>8. Seguretat</h2>
+  <p>Les comunicacions viatgen xifrades i l'accés a les dades està restringit per regles que impedeixen que un client vegi la informació d'un altre. Només el personal de la botiga pot consultar el saldo d'un client, i únicament en atendre'l a caixa.</p>
+
+  <h2>9. Canvis en aquesta política</h2>
+  <p>Si modifiquem aquesta política, actualitzarem la data de l'encapçalament i, si el canvi és rellevant, t'avisarem dins de l'aplicació.</p>
+
+  <div class="box">
+    <strong>En resum:</strong> guardem el mínim per portar el compte dels teus punts, no ho venem a ningú, i pots esborrar-ho tot tu mateix des de l'aplicació quan vulguis.
+  </div>
+</section>
+
+<section id="en">
+<p class="date">Last updated: 5 September 2026</p>
+
+  <h2>1. Who is responsible for your data</h2>
+  <p>Yanling Zhou, NIE X2762129J, owner of the shop <strong>Tigo — un poco de todo</strong>, address: Carrer de Cecili Metel 6, 07460 Pollença (Balearic Islands, Spain).</p>
+  <p>Contact email for anything related to your data: <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>.</p>
+
+  <h2>2. What data we collect</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Data</th><th>Why</th></tr>
+    <tr><td>Name</td><td>To identify you at the till when adding or handing over points</td></tr>
+    <tr><td>Email address</td><td>To access your account and recover your password</td></tr>
+    <tr><td>Amount of your purchases in the shop</td><td>To calculate the points you earn</td></tr>
+    <tr><td>Points balance and history of rewards</td><td>To run the loyalty programme</td></tr>
+    <tr><td>Your phone's notification identifier</td><td>To send you alerts about new items and your points</td></tr>
+    <tr><td>Chosen language and alert preferences</td><td>To show you the app in your language</td></tr>
+  </table></div>
+  <p>We do not collect your location, your contacts, your photos or any payment data. The app does not process payments: all purchases are paid for in the physical shop.</p>
+
+  <h2>3. Why we may process it</h2>
+  <ul>
+    <li><strong>To deliver what we offer you</strong> (GDPR article 6.1.b): without your data we could not keep track of your points or hand you your rewards.</li>
+    <li><strong>With your consent</strong> (article 6.1.a): notifications. You can withdraw it at any time from your phone's settings, and reminders also from your profile in the app.</li>
+  </ul>
+
+  <h2>4. Who else sees it</h2>
+  <p>We do not sell or share your data with anyone. It is only processed, on our behalf, by the technical providers that make the app work:</p>
+  <ul>
+    <li><strong>Supabase</strong> — database and accounts. Servers in Paris (European Union).</li>
+    <li><strong>Expo</strong> — notification delivery. It receives only your phone's identifier and the text of the alert.</li>
+    <li><strong>Google Firebase</strong> — notification delivery on Android devices.</li>
+    <li><strong>Google Gemini</strong> — used solely to generate descriptions of the shop's products from their photos. None of your data is sent to it.</li>
+  </ul>
+  <p>These providers may involve transfers outside the European Economic Area, covered by the standard contractual clauses approved by the European Commission.</p>
+
+  <h2>5. How long we keep it</h2>
+  <p>For as long as your account is open. If you delete your account from the app, your personal data and points balance are erased immediately and irreversibly. The shop's anonymous accounting records may be kept as required by law.</p>
+  <p>Note that your points expire if you do not make any purchase for six months; we warn you before that happens.</p>
+
+  <h2>6. Your rights</h2>
+  <p>You may access your data, correct it, delete it, restrict or object to its processing, and ask us to hand it over in a portable format. To exercise these rights, write to <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>; we will reply within one month.</p>
+  <p>You can delete your account yourself, at any time, from <em>Profile → Delete my account</em> inside the app.</p>
+  <p>If you believe we have not handled your request properly, you may complain to the Spanish Data Protection Agency (<a href="https://www.aepd.es">www.aepd.es</a>).</p>
+
+  <h2>7. Minors</h2>
+  <p>The app is not aimed at children under 14. If we find an account belonging to a child under that age without parental authorisation, we will delete it.</p>
+
+  <h2>8. Security</h2>
+  <p>Communications are encrypted and access to data is restricted by rules that prevent one customer from seeing another's information. Only shop staff can look up a customer's balance, and only while serving them at the till.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>If we change this policy, we will update the date at the top and, if the change is significant, we will let you know inside the app.</p>
+
+  <div class="box">
+    <strong>In short:</strong> we keep the minimum needed to track your points, we do not sell it to anyone, and you can erase it all yourself from the app whenever you want.
+  </div>
+</section>
+
+<section id="zh">
+<p class="date">最后更新：2026年9月5日</p>
+
+  <h2>1. 谁负责您的数据</h2>
+  <p>Yanling Zhou（外国人身份号 X2762129J），商店 <strong>Tigo — un poco de todo</strong> 的经营者，地址：Carrer de Cecili Metel 6, 07460 Pollença（西班牙巴利阿里群岛）。</p>
+  <p>与数据相关的任何问题请联系：<a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>。</p>
+
+  <h2>2. 我们收集哪些数据</h2>
+  <div class="table-wrap"><table>
+    <tr><th>数据</th><th>用途</th></tr>
+    <tr><td>姓名</td><td>结账时累积或发放积分时确认您的身份</td></tr>
+    <tr><td>电子邮箱</td><td>登录账户与找回密码</td></tr>
+    <tr><td>您在店内的消费金额</td><td>计算应得的积分</td></tr>
+    <tr><td>积分余额与兑换记录</td><td>运营会员积分计划</td></tr>
+    <tr><td>手机的通知标识符</td><td>向您推送新品与积分提醒</td></tr>
+    <tr><td>所选语言与通知偏好</td><td>以您的语言显示应用</td></tr>
+  </table></div>
+  <p>我们不收集您的位置、通讯录、照片或任何支付信息。本应用不进行收款：所有消费均在实体店内支付。</p>
+
+  <h2>3. 处理数据的依据</h2>
+  <ul>
+    <li><strong>为履行我们提供的服务</strong>（GDPR 第 6.1.b 条）：没有您的数据，我们无法记录积分或发放礼品。</li>
+    <li><strong>基于您的同意</strong>（第 6.1.a 条）：通知推送。您可随时在手机设置中撤回，提醒类通知也可在应用的"我的"页面关闭。</li>
+  </ul>
+
+  <h2>4. 还有谁能看到</h2>
+  <p>我们不会出售或转让您的数据。仅由为我们提供技术支持的服务商代为处理：</p>
+  <ul>
+    <li><strong>Supabase</strong> — 数据库与账户，服务器位于巴黎（欧盟境内）。</li>
+    <li><strong>Expo</strong> — 通知发送，仅接收您手机的标识符与通知文本。</li>
+    <li><strong>Google Firebase</strong> — 安卓设备的通知送达。</li>
+    <li><strong>Google Gemini</strong> — 仅用于根据商品照片生成商品描述，不会发送您的任何数据。</li>
+  </ul>
+  <p>上述服务商可能涉及向欧洲经济区以外的传输，此类传输受欧盟委员会批准的标准合同条款保护。</p>
+
+  <h2>5. 保存期限</h2>
+  <p>在您的账户存续期间保存。若您在应用内删除账户，个人数据与积分余额将立即且不可恢复地删除。商店的匿名会计记录可能依法律要求保留。</p>
+  <p>请注意：如果您连续六个月没有消费，积分将过期；到期前我们会提醒您。</p>
+
+  <h2>6. 您的权利</h2>
+  <p>您有权访问、更正、删除您的数据，限制或反对处理，并要求以可携带的格式获取数据。行使权利请发送邮件至 <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>；我们将在一个月内答复。</p>
+  <p>您也可以随时自行在应用内通过 <em>我的 → 删除我的账户</em> 删除账户。</p>
+  <p>若您认为我们未妥善处理您的请求，可向西班牙数据保护局投诉（<a href="https://www.aepd.es">www.aepd.es</a>）。</p>
+
+  <h2>7. 未成年人</h2>
+  <p>本应用不面向 14 岁以下的未成年人。如发现未经父母或监护人授权的未成年人账户，我们将予以删除。</p>
+
+  <h2>8. 安全</h2>
+  <p>通信均经过加密，数据访问受规则限制，顾客之间无法查看彼此的信息。只有店员可以查询顾客的积分余额，且仅限于结账服务时。</p>
+
+  <h2>9. 政策变更</h2>
+  <p>如本政策发生变更，我们将更新顶部的日期；若变更重大，我们会在应用内通知您。</p>
+
+  <div class="box">
+    <strong>简而言之：</strong>我们只保存记录积分所必需的最少信息，绝不出售给任何人，您可以随时在应用内自行删除全部数据。
+  </div>
+</section>
+
+<section id="de">
+<p class="date">Zuletzt aktualisiert: 5. September 2026</p>
+
+  <h2>1. Wer für deine Daten verantwortlich ist</h2>
+  <p>Yanling Zhou, NIE X2762129J, Inhaberin des Geschäfts <strong>Tigo — un poco de todo</strong>, Anschrift: Carrer de Cecili Metel 6, 07460 Pollença (Balearen, Spanien).</p>
+  <p>Kontakt für alle Fragen zu deinen Daten: <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>.</p>
+
+  <h2>2. Welche Daten wir erheben</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Daten</th><th>Wofür</th></tr>
+    <tr><td>Name</td><td>Um dich an der Kasse beim Sammeln oder Einlösen von Punkten zu erkennen</td></tr>
+    <tr><td>E-Mail-Adresse</td><td>Zugang zu deinem Konto und Passwort-Wiederherstellung</td></tr>
+    <tr><td>Betrag deiner Einkäufe im Laden</td><td>Berechnung der dir zustehenden Punkte</td></tr>
+    <tr><td>Punktestand und Verlauf der Prämien</td><td>Durchführung des Treueprogramms</td></tr>
+    <tr><td>Benachrichtigungs-Kennung deines Handys</td><td>Hinweise zu Neuheiten und zu deinen Punkten</td></tr>
+    <tr><td>Gewählte Sprache und Hinweiseinstellungen</td><td>Darstellung der App in deiner Sprache</td></tr>
+  </table></div>
+  <p>Wir erheben weder deinen Standort noch deine Kontakte, Fotos oder Zahlungsdaten. Die App führt keine Zahlungen durch: Alle Einkäufe werden im Laden bezahlt.</p>
+
+  <h2>3. Warum wir sie verarbeiten dürfen</h2>
+  <ul>
+    <li><strong>Zur Erfüllung unseres Angebots</strong> (Art. 6.1.b DSGVO): Ohne deine Daten könnten wir deine Punkte nicht führen und dir keine Prämien aushändigen.</li>
+    <li><strong>Mit deiner Einwilligung</strong> (Art. 6.1.a): die Benachrichtigungen. Du kannst sie jederzeit in den Einstellungen deines Handys widerrufen, Erinnerungen auch in deinem Profil in der App.</li>
+  </ul>
+
+  <h2>4. Wer sie sonst noch sieht</h2>
+  <p>Wir verkaufen oder übermitteln deine Daten an niemanden. Sie werden nur in unserem Auftrag von den technischen Dienstleistern verarbeitet, die die App betreiben:</p>
+  <ul>
+    <li><strong>Supabase</strong> — Datenbank und Konten. Server in Paris (Europäische Union).</li>
+    <li><strong>Expo</strong> — Versand der Benachrichtigungen. Erhält nur die Kennung deines Handys und den Text des Hinweises.</li>
+    <li><strong>Google Firebase</strong> — Zustellung der Benachrichtigungen auf Android-Geräten.</li>
+    <li><strong>Google Gemini</strong> — wird ausschließlich verwendet, um aus den Produktfotos des Ladens Beschreibungen zu erzeugen. Es werden keine Daten von dir übermittelt.</li>
+  </ul>
+  <p>Bei diesen Anbietern kann es zu Übermittlungen außerhalb des Europäischen Wirtschaftsraums kommen, die durch die von der Europäischen Kommission genehmigten Standardvertragsklauseln abgedeckt sind.</p>
+
+  <h2>5. Wie lange wir sie speichern</h2>
+  <p>Solange dein Konto besteht. Wenn du dein Konto in der App löschst, werden deine personenbezogenen Daten und dein Punktestand sofort und unwiderruflich gelöscht. Anonyme Buchhaltungsunterlagen des Ladens können aufgrund gesetzlicher Pflichten aufbewahrt werden.</p>
+  <p>Beachte, dass deine Punkte verfallen, wenn du sechs Monate lang nichts einkaufst; wir weisen dich vorher darauf hin.</p>
+
+  <h2>6. Deine Rechte</h2>
+  <p>Du kannst auf deine Daten zugreifen, sie berichtigen, löschen, ihre Verarbeitung einschränken oder ihr widersprechen und die Herausgabe in einem übertragbaren Format verlangen. Schreibe dazu an <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>; wir antworten innerhalb eines Monats.</p>
+  <p>Du kannst dein Konto jederzeit selbst löschen, unter <em>Profil → Mein Konto löschen</em> in der App.</p>
+  <p>Wenn du der Ansicht bist, dass wir deine Anfrage nicht ordnungsgemäß bearbeitet haben, kannst du dich bei der spanischen Datenschutzbehörde beschweren (<a href="https://www.aepd.es">www.aepd.es</a>).</p>
+
+  <h2>7. Minderjährige</h2>
+  <p>Die App richtet sich nicht an Kinder unter 14 Jahren. Stellen wir ein Konto eines Kindes unter diesem Alter ohne Zustimmung der Eltern oder Erziehungsberechtigten fest, löschen wir es.</p>
+
+  <h2>8. Sicherheit</h2>
+  <p>Die Kommunikation ist verschlüsselt, und der Zugriff auf die Daten ist durch Regeln beschränkt, die verhindern, dass ein Kunde die Daten eines anderen sieht. Nur das Ladenpersonal kann den Punktestand eines Kunden einsehen, und zwar ausschließlich bei der Bedienung an der Kasse.</p>
+
+  <h2>9. Änderungen dieser Richtlinie</h2>
+  <p>Ändern wir diese Richtlinie, aktualisieren wir das Datum oben und informieren dich bei wesentlichen Änderungen in der App.</p>
+
+  <div class="box">
+    <strong>Kurz gesagt:</strong> Wir speichern nur das Nötigste, um deine Punkte zu führen, verkaufen nichts davon und du kannst jederzeit alles selbst in der App löschen.
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="name">Tigo — un poco de todo</span>
+    Yanling Zhou · NIE X2762129J<br>
+    Carrer de Cecili Metel 6, 07460 Pollença, Illes Balears<br>
+    <a href="mailto:tigoupdt@gmail.com">tigoupdt@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
