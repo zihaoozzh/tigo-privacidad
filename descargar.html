@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descarga la app Tigo</title>
+<meta name="description" content="Descarga Tigo, la app de puntos del bazar Tigo en Pollença.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1F5FA8; --blue-dark:#17497F; --green:#4C9644;
+    --ink:#22272E; --body:#454C56; --muted:#7A828C;
+    --line:#E4E9F0; --sand:#F4F7FB; --white:#fff;
+    --radius:14px; --maxw:820px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:76px;}
+  body{
+    margin:0; background:var(--white); color:var(--body);
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    font-size:16.5px; line-height:1.72; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+
+  /* Cabecera */
+  header{
+    background:linear-gradient(160deg,var(--blue) 0%,var(--blue-dark) 100%);
+    color:#fff; padding:46px 0 40px;
+  }
+  header img{height:56px; display:block; margin-bottom:22px;}
+  header h1{margin:0 0 6px; font-size:32px; font-weight:700; letter-spacing:-.6px; line-height:1.2;}
+  header .sub{margin:0; font-size:16.5px; opacity:.88; font-weight:400; max-width:620px;}
+  header .date{margin:20px 0 0; font-size:14px; opacity:.78; font-weight:400;}
+
+  /* Selector de idioma */
+  nav{
+    position:sticky; top:0; z-index:10;
+    background:rgba(255,255,255,.92); backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex; gap:6px; overflow-x:auto; padding-top:10px; padding-bottom:10px;}
+  nav a{
+    flex:0 0 auto; padding:7px 16px; border-radius:999px; border:0;
+    color:var(--muted); text-decoration:none; font-size:14.5px; font-weight:500;
+    transition:background .15s,color .15s;
+  }
+  nav a:hover{background:var(--sand); color:var(--blue); border:0;}
+
+  /* Contenido */
+  main{padding:44px 0 0;}
+  section{display:none; animation:fade .25s ease; scroll-margin-top:24px; padding-top:8px;}
+  section:target{display:block;}
+  section#es{display:block;}
+  body:has(section:target) section#es:not(:target){display:none;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+
+  .date{color:var(--muted); font-size:14px;}
+  section > .date:first-child{display:none;}
+
+  h2{
+    font-size:20.5px; font-weight:600; color:var(--ink);
+    margin:42px 0 12px; letter-spacing:-.25px; scroll-margin-top:80px;
+    padding-top:2px;
+  }
+  section > h2:first-of-type{margin-top:0;}
+  p{margin:0 0 14px;}
+  ul{padding-left:22px; margin:0 0 14px;}
+  li{margin-bottom:7px;}
+  strong{color:var(--ink); font-weight:600;}
+  a{color:var(--blue); text-decoration:none; border-bottom:1px solid rgba(31,95,168,.28);}
+  a:hover{border-bottom-color:var(--blue);}
+
+  /* Tabla */
+  .table-wrap{overflow-x:auto; margin:16px 0 20px; border:1px solid var(--line); border-radius:var(--radius);}
+  table{width:100%; border-collapse:collapse; font-size:15.5px;}
+  th,td{text-align:left; padding:13px 16px; vertical-align:top;}
+  th{background:var(--sand); font-weight:600; color:var(--ink); font-size:14px; letter-spacing:.2px;}
+  tr + tr td{border-top:1px solid var(--line);}
+  td:first-child{font-weight:500; color:var(--ink); white-space:nowrap;}
+  @media(max-width:560px){td:first-child{white-space:normal;}}
+
+  /* Caja resumen */
+  .box{
+    background:var(--sand); border:1px solid var(--line); border-left:4px solid var(--green);
+    border-radius:var(--radius); padding:18px 20px; margin:34px 0 8px; font-size:16px;
+  }
+
+  /* Pie */
+  footer{
+    margin-top:56px; border-top:1px solid var(--line); background:var(--sand);
+    padding:30px 0 40px; color:var(--muted); font-size:14.5px;
+  }
+  footer .name{color:var(--ink); font-weight:600; display:block; margin-bottom:4px;}
+  footer a{color:var(--blue);}
+
+  @media(max-width:600px){
+    body{font-size:15.5px; line-height:1.68;}
+    .wrap{padding:0 18px;}
+    header{padding:30px 0 26px;}
+    header h1{font-size:25px;}
+    header img{height:40px; margin-bottom:16px;}
+    header .sub{font-size:14.5px;}
+    header .date{font-size:13px; margin-top:14px;}
+    nav .wrap{gap:2px;}
+    nav a{padding:6px 12px; font-size:14px;}
+    main{padding:32px 0 0;}
+    h2{font-size:17.5px; margin:32px 0 10px;}
+    th,td{padding:11px 13px; font-size:14.5px;}
+    .box{padding:16px 18px; font-size:15px;}
+  }
+
+  .dl{max-width:520px; margin:0 auto; text-align:center; padding:8px 0 20px;}
+  .dl h2{font-size:24px; margin:8px 0 10px;}
+  .btn{display:inline-block; background:var(--blue); color:#fff !important; border:0 !important; text-decoration:none;
+       padding:16px 30px; border-radius:14px; font-weight:600; font-size:17px; margin:18px 0 8px;}
+  .soon{color:var(--muted); font-size:15px; margin-top:22px;}
+  .perks{list-style:none; padding:0; margin:22px 0 0; text-align:left; display:inline-block;}
+  .perks li{padding:6px 0;}
+  .perks li::before{content:"✓"; color:var(--green); font-weight:700; margin-right:10px;}
+</style>
+<script>
+  // En Android, abre directamente la ficha de Google Play
+  if (/android/i.test(navigator.userAgent)) { location.replace("https://play.google.com/store/apps/details?id=com.zihao.tigo"); }
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="logo.png" alt="Tigo — un poco de todo">
+    <h1>Descarga la app Tigo</h1>
+    <p class="sub">Tus compras en Tigo suman puntos · Pollença</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="dl">
+    <h2>Disponible para Android</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.zihao.tigo">Descargar en Google Play</a>
+    <ul class="perks">
+      <li>1 € = 1 punto en cada compra</li>
+      <li>Puntos de regalo al registrarte</li>
+      <li>Vales de descuento y regalos</li>
+      <li>Novedades y ofertas en tu móvil</li>
+    </ul>
+    <p class="soon">¿Tienes iPhone? La versión para iPhone llegará pronto. Pregunta en la tienda.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span class="name">Tigo — un poco de todo</span>
+    Carrer de Cecili Metel 6, 07460 Pollença, Illes Balears<br>
+    <a href="./">Política de privacidad</a>
+  </div>
+</footer>
+</body>
+</html>
